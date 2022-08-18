@@ -1,4 +1,4 @@
-This repository will contains all the code used in the following journal paper:
+This repository will contain all the code used in the following journal paper:
 
 @inproceedings{banar2022multi,
   title={Transfer Learning for the Visual Arts: The Multi-Modal Retrieval of Iconclass Codes.},

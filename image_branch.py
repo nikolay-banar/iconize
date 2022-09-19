@@ -1,8 +1,8 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-from bert import BertConfig
-import bert
+from utils.bert import BertConfig
+from utils import bert
 import os
 from model.faster_rcnn.resnet import resnet
 

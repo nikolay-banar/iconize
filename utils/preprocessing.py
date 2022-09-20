@@ -10,7 +10,8 @@ import json
 
 from datetime import datetime
 
-def parse_json(opt):
+
+def set_exp_params(opt):
     with open(opt.conf, "r") as reader:
         text = reader.read()
         exp_config = json.loads(text)
@@ -56,7 +57,6 @@ def parse_json(opt):
 
     if exp_config['src_txt_paths']:
         opt.n_vec += len(exp_config['src_txt_paths'])
-
 
     TIMESTAMP = "{0:%Y-%m-%dT%H-%M-%S/}".format(datetime.now())
 

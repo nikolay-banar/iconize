@@ -4,7 +4,7 @@ import shutil
 
 import torch
 import numpy as np
-from utils.preprocessing import get_train, get_val_or_test, convert_to_unicode, parse_json
+from utils.preprocessing import get_train, get_val_or_test, convert_to_unicode, set_exp_params
 from multi_model import SAEM
 from utils.evaluation import AverageMeter, LogCollector, encode_data, get_rank
 from scipy.spatial.distance import cdist
@@ -109,7 +109,7 @@ def parse_args():
 def main():
     opt = parse_args()
 
-    exp_config = parse_json(opt)
+    exp_config = set_exp_params(opt)
 
     logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO)
     tb_logger.configure(opt.logger_name, flush_secs=5)

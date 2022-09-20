@@ -1,0 +1,17 @@
+{ "name": "ide2c_L19_L10",
+  "exp_type": "both_finetuning",
+  "root": "../bottom-up-attention/data/art/",
+  "images_path":  "rkd_images",
+  "src_image_file": "image.txt",
+  "precomp_image_file": "",
+  "bb_file": "torch_final_bb.npy",
+  "src_txt_paths": ["dutch.txt" ,"english.txt"],
+  "tgt_txt_path":  "icon_tgt.txt",
+  "target_loader":  "icon5.csv",
+  "visual_encoder": "fast",
+  "frozen_bert_layers": 10,
+  "frozen_detector_blocks": 19,
+  "batch_size": 32,
+  "grad_acc_steps": 2
+}
+

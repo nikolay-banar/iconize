@@ -5,10 +5,7 @@ import torch.backends.cudnn as cudnn
 from torch.nn.utils.clip_grad import clip_grad_norm
 import torch.nn.functional as F
 from utils import loss_utils
-from image_branch import FasterRCNNExtractor
 from text_branch import TextEncoder
-from image_branch import FeaturesMapper
-
 
 def l1norm(X, dim, eps=1e-8):
     """L1-normalize columns of X
@@ -51,8 +48,10 @@ class SAEM(object):
         if opt.visual_encoder == "skip":
             self.img_enc = None
         elif opt.visual_encoder == "fast":
+            from image_branch import FasterRCNNExtractor
             self.img_enc = FasterRCNNExtractor(opt)
         elif opt.visual_encoder == "mapper":
+            from image_branch import FeaturesMapper
             self.img_enc = FeaturesMapper(opt)
         else:
             raise Exception('Not Implemented')

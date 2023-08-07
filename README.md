@@ -10,8 +10,7 @@ The following commands can be used to train or test the models:
 CUDA_VISIBLE_DEVICES=0,1 python train.py --conf config_experiments/both_finetuning/ide2c_L19_L10.json
 CUDA_VISIBLE_DEVICES=0,1 python test.py --conf config_experiments/both_finetuning/ide2c_L19_L10.json
 
-
-## Citation
+The short tutorial is [here](https://colab.research.google.com/drive/1OLkjrXS-NDhXjYoifsMTvQZwWcOf9zNT?usp=share_link).
 
 ```
 @inproceedings{banar2022multi, title={Transfer Learning for the Visual Arts: The Multi-Modal Retrieval of Iconclass Codes.}, author={Banar, Nikolay and Daelemans, Walter and Kestemont, Mike}, booktitle={Journal on Computing and Cultural Heritage}, pages={to be published}, year={2022}}
